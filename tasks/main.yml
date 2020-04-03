@@ -1,0 +1,46 @@
+---
+- name: Add the OS specific variables
+  include_vars: "{{ ansible_os_family }}.yml"
+
+- name: Run OS specific tasks
+  include_tasks: "{{ansible_os_family}}.yml"
+
+- name: Custom zsh options
+  template:
+    src: zshrc
+    dest: "/home/{{admin_user}}/.zshrc"
+    owner: "{{admin_user}}"
+    group: "{{admin_user}}"
+
+- name: Download zprezto
+  git:
+    repo: https://github.com/sorin-ionescu/prezto.git
+    dest: /usr/local/share/zprezto
+    update: no
+
+- name: Create sym links to zprezto resources
+  file:
+    src: "{{zprezto_dir}}/runcoms/{{item}}"
+    dest: "/home/{{admin_user}}/.{{item}}"
+    owner: "{{admin_user}}"
+    group: "{{admin_user}}"
+    state: link
+  with_items:
+    - zlogin
+    - zlogout
+    - zprofile
+    - zshenv
+
+- name: Copy zprezto modules config
+  copy:
+    src: zpreztorc
+    dest: "/home/{{admin_user}}/.zpreztorc"
+    owner: "{{admin_user}}"
+    group: "{{admin_user}}"
+    mode: 0644
+
+- name: Copy custom prompt config
+  copy:
+    src: prompt_luis_setup
+    dest: "{{zprezto_dir}}/modules/prompt/functions/"
+    mode: 0644
