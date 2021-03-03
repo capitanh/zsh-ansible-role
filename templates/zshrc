@@ -13,6 +13,7 @@ SAVEHIST=1000
 setopt appendhistory extendedglob nomatch notify
 unsetopt autocd beep
 bindkey -e
+
 # Lines added by compinstall
 zstyle :compinstall filename '/home/{{admin_user}}/.zshrc'
 autoload -Uz compinit
@@ -38,6 +39,7 @@ alias ll='ls -l'
 alias la='ls -la'
 alias tf='tail -f'
 alias k='k --human --group-directories-first'
+alias ka='k -a'
 alias df='pydf'
 
 #############################################################
