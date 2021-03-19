@@ -25,12 +25,12 @@
     owner: "{{admin_user}}"
     group: "{{admin_user}}"
     state: link
+    follow: no
   with_items:
     - zlogin
     - zlogout
     - zprofile
     - zshenv
-  become: no
 
 - name: Copy zprezto modules config
   copy:
