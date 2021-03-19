@@ -30,6 +30,7 @@
     - zlogout
     - zprofile
     - zshenv
+  become: no
 
 - name: Copy zprezto modules config
   copy:
