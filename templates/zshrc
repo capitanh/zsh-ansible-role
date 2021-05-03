@@ -41,6 +41,7 @@ alias tf='tail -f'
 alias k='k --human --group-directories-first'
 alias ka='k -a'
 alias df='pydf'
+alias ps='procs'
 
 #############################################################
 # Custom environment variables
