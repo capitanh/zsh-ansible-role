@@ -42,6 +42,7 @@ alias k='k --human --group-directories-first'
 alias ka='k -a'
 alias df='pydf'
 alias ps='procs'
+alias du='gdu_linux_amd64'
 
 #############################################################
 # Custom environment variables
