@@ -32,7 +32,7 @@ function cd() {
 
 #############################################################
 # Custom aliases
-alias cat='batcat -p'
+alias cat='batcat'
 alias mi='micro'
 alias ls='ls --color=auto --group-directories-first'
 alias ll='ls -l'
