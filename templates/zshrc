@@ -32,7 +32,7 @@ function cd() {
 
 #############################################################
 # Custom aliases
-alias cat='bat -p'
+alias cat='batcat -p'
 alias mi='micro'
 alias ls='ls --color=auto --group-directories-first'
 alias ll='ls -l'
@@ -47,6 +47,7 @@ alias ps='procs'
 # Custom environment variables
 export EDITOR=micro
 export MICRO_TRUECOLOR=1
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 #PROMPT='[%F{082}%n@%M %F{033}%d%F{255}]%F{226}%F{255}$ '
 prompt luis
