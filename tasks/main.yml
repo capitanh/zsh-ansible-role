@@ -42,6 +42,6 @@
 
 - name: Copy custom prompt config
   copy:
-    src: prompt_luis_setup
+    src: prompt_personal_setup
     dest: "{{zprezto_dir}}/modules/prompt/functions/"
     mode: 0644
