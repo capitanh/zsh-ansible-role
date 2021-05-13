@@ -21,6 +21,7 @@ compinit
 
 #############################################################
 # Custom functions and sources
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 function cd() {
   new_directory="$*";
   if [ $# -eq 0 ]; then
