@@ -23,6 +23,7 @@ compinit
 # Custom functions and sources
 source "{{fzf_dir}}/shell/completion.zsh"
 source "{{fzf_dir}}/shell/key-bindings.zsh"
+eval "$(navi widget zsh)"
 function cd() {
   new_directory="$*";
   if [ $# -eq 0 ]; then
