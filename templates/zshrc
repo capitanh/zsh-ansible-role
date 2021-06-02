@@ -21,7 +21,8 @@ compinit
 
 #############################################################
 # Custom functions and sources
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source "{{fzf_dir}}/shell/completion.zsh"
+source "{{fzf_dir}}/shell/key-bindings.zsh"
 function cd() {
   new_directory="$*";
   if [ $# -eq 0 ]; then
