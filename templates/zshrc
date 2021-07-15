@@ -31,6 +31,9 @@ function cd() {
   fi;
   builtin cd "${new_directory}" && exa --long --group --group-directories-first --git --icons
 }
+function title() {
+  echo -en "\e]2;$@\a"
+}
 
 #############################################################
 # Custom aliases
