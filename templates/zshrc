@@ -53,7 +53,7 @@ alias du='gdu_linux_amd64'
 export EDITOR=micro
 export MICRO_TRUECOLOR=1
 export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
-export EXA_COLORS="ur=38;5;250:uw=38;5;250:ux=38;5;250:ue=38;5;250:gr=38;5;245:gw=38;5;245:gx=38;5;245:tr=38;5;240:tw=38;5;240:tx=38;5;240:un=38;5;242:gn=38;5;242:da=38;5;154:uu=38;5;250:gu=38;5;250:sn=38;5;33:sb=38;5;33"
+export EXA_COLORS="ex=32;1:ur=38;5;250:uw=38;5;250:ux=38;5;250:ue=38;5;250:gr=38;5;245:gw=38;5;245:gx=38;5;245:tr=38;5;240:tw=38;5;240:tx=38;5;240:un=38;5;242:gn=38;5;242:da=38;5;255:uu=38;5;250:gu=38;5;250:sn=38;5;33:sb=38;5;33"
 export FZF_DEFAULT_OPTS='--height 40% --border'
 
 prompt personal
