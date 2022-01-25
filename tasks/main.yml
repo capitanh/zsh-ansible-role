@@ -40,8 +40,15 @@
     group: "{{admin_user}}"
     mode: 0644
 
-- name: Copy custom prompt config
+- name: Copy Powerlevel10k config file
   copy:
-    src: prompt_personal_setup
-    dest: "{{zprezto_dir}}/modules/prompt/functions/"
-    mode: 0644
+    src: p10k.zsh
+    dest: "/home/{{admin_user}}/.p10k.zsh"
+    owner: "{{admin_user}}"
+    group: "{{admin_user}}"
+
+#- name: Copy custom prompt config
+#  copy:
+#    src: prompt_personal_setup
+#    dest: "{{zprezto_dir}}/modules/prompt/functions/"
+#    mode: 0644
