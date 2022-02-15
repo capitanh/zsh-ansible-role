@@ -31,6 +31,7 @@ zstyle ':prezto:load' pmodule \
   'terminal' \
   'editor' \
   'syntax-highlighting' \
+  'autosuggestions' \
   'history' \
   'directory' \
   'spectrum' \
@@ -45,6 +46,7 @@ zstyle ':prezto:load' pmodule \
 
 # Set the query found color.
 # zstyle ':prezto:module:autosuggestions:color' found ''
+zstyle ':prezto:module:autosuggestions' color 'yes'
 
 #
 # Completions
