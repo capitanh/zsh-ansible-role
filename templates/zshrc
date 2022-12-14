@@ -34,7 +34,7 @@ function cd() {
   if [ $# -eq 0 ]; then
     new_directory=${HOME};
   fi;
-    builtin cd "${new_directory}" && exa --long --group --group-directories-first --color-scale --icons
+    builtin cd "${new_directory}" && exa --long --group --group-directories-first --icons --color-scale
 }
 function title() {
   echo -en "\e]2;$@\a"
@@ -48,7 +48,7 @@ alias ls='ls --color=auto --group-directories-first'
 alias ll='ls -l'
 alias la='ls -la'
 alias tf='tail -f'
-alias k='exa --long --group --group-directories-first --icons --color-scale --git'
+alias k='exa --long --group --group-directories-first --icons --color-scale'
 alias ka='k -a'
 alias df='pydf'
 alias ps='procs'
