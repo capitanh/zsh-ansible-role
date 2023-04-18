@@ -21,7 +21,7 @@ unsetopt autocd beep
 bindkey -e
 
 # Lines added by compinstall
-zstyle :compinstall filename '/home/{{admin_user}}/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
 compinit
 
@@ -29,13 +29,14 @@ compinit
 # Custom functions and sources
 source "{{fzf_dir}}/shell/completion.zsh"
 source "{{fzf_dir}}/shell/key-bindings.zsh"
+
 eval "$(direnv hook zsh)"
 function cd() {
   new_directory="$*";
   if [ $# -eq 0 ]; then
     new_directory=${HOME};
   fi;
-    builtin cd "${new_directory}" && exa --long --group --group-directories-first --icons --color-scale
+  builtin cd "${new_directory}" && exa --long --group --group-directories-first --icons --color-scale
 }
 function title() {
   echo -en "\e]2;$@\a"
