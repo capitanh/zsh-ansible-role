@@ -55,6 +55,7 @@ alias ka='k -a'
 alias df='pydf'
 alias ps='procs'
 alias du='gdu_linux_amd64'
+alias md='frogmouth'
 
 #############################################################
 # Custom environment variables
