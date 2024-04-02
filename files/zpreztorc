@@ -59,6 +59,7 @@ zstyle ':prezto:module:autosuggestions' color 'yes'
 
 #
 # Fzf-tab
+#
 
 # disable sort when completing `git checkout`
 zstyle ':completion:*:git-checkout:*' sort false
