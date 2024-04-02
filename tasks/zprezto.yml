@@ -6,13 +6,13 @@
 
 - name: Create sym links to zprezto resources
   file:
-    src: "{{zprezto_dir}}/runcoms/{{item}}"
-    dest: "/home/{{admin_user}}/.{{item}}"
+    src: "{{zprezto_dir}}/runcoms/{{resource}}"
+    dest: "/home/{{admin_user}}/.{{resource}}"
     owner: "{{admin_user}}"
     group: "{{admin_user}}"
     state: link
     follow: no
-  with_items:
+  with_resources:
     - zlogin
     - zlogout
     - zprofile
@@ -36,7 +36,7 @@
 
 - name: Install contrib modules
   git:
-    repo: "{{item}}"
+    repo: "{{module}}"
     dest: "{{zprezto_dir}}/contrib"
     depth: 1
-  with_items: "{{contrib_modules}}"
+  with_modules: "{{contrib_modules}}"
