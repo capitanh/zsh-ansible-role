@@ -37,7 +37,7 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
-  'fzf-tab' \  
+  'fzf-tab' \
   'git' \
   'prompt'
 
