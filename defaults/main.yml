@@ -2,4 +2,5 @@
 zprezto_dir:          /usr/local/share/zprezto  # zprezto install dir
 fzf_dir:              /usr/local/share/fzf      # fzf source path
 contrib_modules:
-  - https://github.com/Aloxaf/fzf-tab.git
+  fzf-tab:
+    url: https://github.com/Aloxaf/fzf-tab.git

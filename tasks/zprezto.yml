@@ -32,15 +32,15 @@
   file:
     path: "{{zprezto_dir}}/contrib"
     state: directory
-    owner: "{{admin_user}}"
-    group: "{{admin_user}}"
+    owner: root
+    group: root
     mode: 0755
 
 - name: Install contrib modules
   git:
-    repo: "{{module}}"
-    dest: "{{zprezto_dir}}/contrib"
+    repo: "{{module.value.url}}"
+    dest: "{{zprezto_dir}}/contrib/{{module.key}}"
     depth: 1
-  with_items: "{{contrib_modules}}"
+  with_dict: "{{contrib_modules}}"
   loop_control:
     loop_var: module
