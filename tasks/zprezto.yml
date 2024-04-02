@@ -1,0 +1,42 @@
+- name: Download zprezto
+  git:
+    repo: https://github.com/sorin-ionescu/prezto.git
+    dest: /usr/local/share/zprezto
+    update: no
+
+- name: Create sym links to zprezto resources
+  file:
+    src: "{{zprezto_dir}}/runcoms/{{item}}"
+    dest: "/home/{{admin_user}}/.{{item}}"
+    owner: "{{admin_user}}"
+    group: "{{admin_user}}"
+    state: link
+    follow: no
+  with_items:
+    - zlogin
+    - zlogout
+    - zprofile
+    - zshenv
+
+- name: Copy zprezto modules config
+  copy:
+    src: zpreztorc
+    dest: "/home/{{admin_user}}/.zpreztorc"
+    owner: "{{admin_user}}"
+    group: "{{admin_user}}"
+    mode: 0644
+
+- name: Create contrib modules dir
+  file:
+    path: "{{zprezto_dir}}/contrib"
+    state: directory
+    owner: "{{admin_user}}"
+    group: "{{admin_user}}"
+    mode: 0755
+
+- name: Install contrib modules
+  git:
+    repo: "{{item}}"
+    dest: "{{zprezto_dir}}/contrib"
+    depth: 1
+  with_items: "{{contrib_modules}}"

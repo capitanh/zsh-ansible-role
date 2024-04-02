@@ -1,9 +1,12 @@
 ---
-- name: Add the OS specific variables
-  include_vars: "{{ ansible_os_family }}.yml"
-
-- name: Run OS specific tasks
-  include_tasks: "{{ansible_os_family}}.yml"
+- name: Install base packages
+  apt:
+    name: "{{packages}}"
+    state: present
+    update_cache: yes
+  vars:
+    packages:
+    - zsh
 
 - name: Custom zsh options
   template:
@@ -12,34 +15,6 @@
     owner: "{{admin_user}}"
     group: "{{admin_user}}"
 
-- name: Download zprezto
-  git:
-    repo: https://github.com/sorin-ionescu/prezto.git
-    dest: /usr/local/share/zprezto
-    update: no
-
-- name: Create sym links to zprezto resources
-  file:
-    src: "{{zprezto_dir}}/runcoms/{{item}}"
-    dest: "/home/{{admin_user}}/.{{item}}"
-    owner: "{{admin_user}}"
-    group: "{{admin_user}}"
-    state: link
-    follow: no
-  with_items:
-    - zlogin
-    - zlogout
-    - zprofile
-    - zshenv
-
-- name: Copy zprezto modules config
-  copy:
-    src: zpreztorc
-    dest: "/home/{{admin_user}}/.zpreztorc"
-    owner: "{{admin_user}}"
-    group: "{{admin_user}}"
-    mode: 0644
-
 - name: Copy Powerlevel10k config file
   copy:
     src: p10k.zsh
@@ -47,8 +22,7 @@
     owner: "{{admin_user}}"
     group: "{{admin_user}}"
 
-#- name: Copy custom prompt config
-#  copy:
-#    src: prompt_personal_setup
-#    dest: "{{zprezto_dir}}/modules/prompt/functions/"
-#    mode: 0644
+- name: Install prezto plugin manager
+  include_tasks: "{{item}}"
+  with_items:
+  - zprezto.yml
