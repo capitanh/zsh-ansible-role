@@ -17,6 +17,8 @@
     - zlogout
     - zprofile
     - zshenv
+  loop_control:
+    loop_var: resource
 
 - name: Copy zprezto modules config
   copy:
@@ -40,3 +42,5 @@
     dest: "{{zprezto_dir}}/contrib"
     depth: 1
   with_modules: "{{contrib_modules}}"
+  loop_control:
+    loop_var: module
