@@ -22,7 +22,7 @@
     owner: "{{admin_user}}"
     group: "{{admin_user}}"
 
-- name: Install prezto plugin manager
+- name: Install other plugins
   include_tasks: "{{item}}"
   with_items:
   - zprezto.yml
