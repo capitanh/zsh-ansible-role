@@ -12,7 +12,7 @@
     group: "{{admin_user}}"
     state: link
     follow: no
-  with_resources:
+  with_items:
     - zlogin
     - zlogout
     - zprofile
@@ -41,6 +41,6 @@
     repo: "{{module}}"
     dest: "{{zprezto_dir}}/contrib"
     depth: 1
-  with_modules: "{{contrib_modules}}"
+  with_items: "{{contrib_modules}}"
   loop_control:
     loop_var: module
