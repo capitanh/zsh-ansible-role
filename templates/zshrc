@@ -32,7 +32,7 @@ function cd() {
   if [ $# -eq 0 ]; then
     new_directory=${HOME};
   fi;
-  builtin cd "${new_directory}" && exa --long --group --group-directories-first --icons --color-scale
+  builtin cd "${new_directory}" && eza --long --group --group-directories-first --icons --color-scale --git
 }
 function title() {
   echo -en "\e]2;$@\a"
@@ -46,7 +46,7 @@ alias ls='ls --color=auto --group-directories-first'
 alias ll='ls -l'
 alias la='ls -la'
 alias tf='tail -f'
-alias k='exa --long --group --group-directories-first --icons --color-scale'
+alias k='eza --long --group --group-directories-first --icons --color-scale --git'
 alias ka='k -a'
 alias df='pydf'
 alias ps='procs'
@@ -58,6 +58,6 @@ alias md='frogmouth'
 export EDITOR=micro
 export MICRO_TRUECOLOR=1
 export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
-export EXA_COLORS="ex=32;1:ur=38;5;250:uw=38;5;250:ux=38;5;250:ue=38;5;250:gr=38;5;245:gw=38;5;245:gx=38;5;245:tr=38;5;240:tw=38;5;240:tx=38;5;240:un=38;5;242:gn=38;5;242:da=38;5;255:uu=38;5;245:gu=38;5;245"
+export EZA_COLORS="ex=32;1:ur=38;5;250:uw=38;5;250:ux=38;5;250:ue=38;5;250:gr=38;5;245:gw=38;5;245:gx=38;5;245:tr=38;5;240:tw=38;5;240:tx=38;5;240:un=38;5;242:gn=38;5;242:da=38;5;255:uu=38;5;245:gu=38;5;245"
 export FZF_DEFAULT_OPTS='--height 40% --border'
 export DIRENV_LOG_FORMAT=
