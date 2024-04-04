@@ -71,7 +71,7 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 # force zsh not to show completion menu, which allows fzf-tab to capture the unambiguous prefix
 zstyle ':completion:*' menu no
 # preview directory's content with eza when completing cd
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa --long --group --group-directories-first --icons --color-scale $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --long --group --group-directories-first --icons --color-scale $realpath'
 # switch group using `<` and `>`
 zstyle ':fzf-tab:*' switch-group '<' '>'
 zstyle ':fzf-tab:*' fzf-min-height 25
