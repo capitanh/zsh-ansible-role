@@ -48,10 +48,11 @@ alias la='ls -la'
 alias tf='tail -f'
 alias k='eza --long --group --group-directories-first --icons --color-scale --git --git-repos'
 alias ka='k -a'
-alias df='pydf'
+alias df='dysk'
 alias ps='procs'
 alias du='gdu_linux_amd64'
 alias md='frogmouth'
+alias zj='zellij'
 
 #############################################################
 # Custom environment variables
