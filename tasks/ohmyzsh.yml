@@ -5,5 +5,8 @@
     mode: 0755
 
 - name: Install oh-my-zsh
-  ansible.builtin.command: /tmp/install.sh
+  ansible.builtin.command:
+    cmd: /tmp/install.sh
+    creates: "/home/{{admin_user}}/.oh-my-zsh"
   become_user: "{{admin_user}}"
+  
