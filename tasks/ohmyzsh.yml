@@ -24,3 +24,4 @@
   with_dict: "{{zsh_plugins}}"
   loop_control:
     loop_var: plugin
+  become_user: "{{admin_user}}"
