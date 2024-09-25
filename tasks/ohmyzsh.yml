@@ -14,3 +14,13 @@
   git:
     repo: https://github.com/romkatv/powerlevel10k.git
     dest: "/home/{{admin_user}}/.oh-my-zsh/custom/themes/powerlevel10k"
+    depth: 1
+
+- name: Install zsh plugins
+  git:
+    repo: "{{plugin.value.url}}"
+    dest: "/home/{{admin_user}}/.oh-my-zsh/custom/plugins/{{plugin.key}}"
+    depth: 1
+  with_dict: "{{zsh_plugins}}"
+  loop_control:
+    loop_var: plugin

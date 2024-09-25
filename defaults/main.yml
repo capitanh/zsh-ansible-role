@@ -1,6 +1,11 @@
 ---
 zprezto_dir:          /usr/local/share/zprezto  # zprezto install dir
 fzf_dir:              /usr/local/share/fzf      # fzf source path
-contrib_modules:
-  fzf-tab:
-    url: https://github.com/Aloxaf/fzf-tab.git
+#contrib_modules:
+#  fzf-tab:
+#    url: https://github.com/Aloxaf/fzf-tab.git
+zsh_plugins:
+  zsh-autosuggestions:
+    url: https://github.com/zsh-users/zsh-autosuggestions
+  zsh-syntax-highlighting:
+    url: https://github.com/zsh-users/zsh-syntax-highlighting.git
