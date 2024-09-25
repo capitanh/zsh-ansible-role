@@ -10,3 +10,7 @@
     creates: "/home/{{admin_user}}/.oh-my-zsh"
   become_user: "{{admin_user}}"
   
+- name: Install powerlevel10k
+  git:
+    repo: https://github.com/romkatv/powerlevel10k.git
+    dest: "/home/{{admin_user}}/.oh-my-zsh/custom/themes/powerlevel10k"
