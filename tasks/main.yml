@@ -18,7 +18,6 @@
 - name: Install other plugins
   include_tasks: "{{item}}"
   with_items:
-  #- zprezto.yml
   - ohmyzsh.yml
 
 - name: Custom zsh options
