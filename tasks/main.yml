@@ -8,13 +8,6 @@
     packages:
     - zsh
 
-- name: Custom zsh options
-  template:
-    src: zshrc
-    dest: "/home/{{admin_user}}/.zshrc"
-    owner: "{{admin_user}}"
-    group: "{{admin_user}}"
-
 - name: Copy Powerlevel10k config file
   copy:
     src: p10k.zsh
@@ -27,3 +20,10 @@
   with_items:
   #- zprezto.yml
   - ohmyzsh.yml
+
+- name: Custom zsh options
+  template:
+    src: zshrc
+    dest: "/home/{{admin_user}}/.zshrc"
+    owner: "{{admin_user}}"
+    group: "{{admin_user}}"
