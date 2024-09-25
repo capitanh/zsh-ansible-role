@@ -18,7 +18,7 @@ unsetopt autocd beep
 bindkey -e
 
 # Lines added by compinstall
-zstyle :compinstall filename '~/.zshrc'
+zstyle :compinstall filename '$HOME/.zshrc'
 autoload -Uz compinit
 compinit
 

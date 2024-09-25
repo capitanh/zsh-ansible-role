@@ -25,4 +25,5 @@
 - name: Install other plugins
   include_tasks: "{{item}}"
   with_items:
-  - zprezto.yml
+  #- zprezto.yml
+  - ohmyzsh.yml

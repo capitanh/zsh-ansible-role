@@ -1,0 +1,9 @@
+- name: Download oh-my-zsh install script
+  ansible.builtin.get_url:
+    url: https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+    dest: /tmp/install.sh
+    mode: 0755
+
+- name: Install oh-my-zsh
+  ansible.builtin.command: /tmp/install.sh
+  
