@@ -4,11 +4,6 @@ source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 source ~/.p10k.zsh
 
 #############################################################
-# zprezto
-#source "{{zprezto_dir}}/init.zsh"
-#ZSH_HIGHLIGHT_STYLES[path]='bold'
-
-#############################################################
 # Oh-My-ZSH
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"

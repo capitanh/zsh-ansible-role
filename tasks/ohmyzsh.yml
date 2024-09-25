@@ -6,7 +6,9 @@
 
 - name: Install oh-my-zsh
   ansible.builtin.command:
-    cmd: /tmp/install.sh
+    argv:
+      - /tmp/install.sh
+      - --unattended
     creates: "/home/{{admin_user}}/.oh-my-zsh"
   become_user: "{{admin_user}}"
   
