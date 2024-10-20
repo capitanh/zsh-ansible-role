@@ -10,7 +10,7 @@
       - /tmp/install.sh
       - --unattended
     creates: "/home/{{admin_user}}/.oh-my-zsh"
-    become_user: "{{admin_user}}"
+  become_user: "{{admin_user}}"
 
 - name: Install zsh plugins
   git:
