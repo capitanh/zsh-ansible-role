@@ -5,11 +5,9 @@
     mode: 0755
 
 - name: Install oh-my-zsh
-  ansible.builtin.command:
-    argv:
-      - /tmp/install.sh
-      - --unattended
+  ansible.builtin.command: /tmp/install.sh --unattended
     creates: "/home/{{admin_user}}/.oh-my-zsh"
+  become: yes
   become_user: "{{admin_user}}"
 
 - name: Install zsh plugins
@@ -20,4 +18,5 @@
   with_dict: "{{zsh_plugins}}"
   loop_control:
     loop_var: plugin
+  become: yes
   become_user: "{{admin_user}}"
