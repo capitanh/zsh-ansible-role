@@ -10,3 +10,6 @@ zsh_plugins:
   zsh-syntax-highlighting:
     url: https://github.com/zsh-users/zsh-syntax-highlighting.git
     destination: plugins
+  fzf-tab:
+    url: https://github.com/Aloxaf/fzf-tab
+    destination: plugins
