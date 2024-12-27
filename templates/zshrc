@@ -10,18 +10,17 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_AUTO_TITLE="true"
-plugins=(git fzf-tab zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting fzf-tab)
 source $ZSH/oh-my-zsh.sh
 ZSH_HIGHLIGHT_STYLES[path]='bold'
 
 # Plugins config
 zstyle ':omz:update' mode auto
 zstyle ':completion:*:git-checkout:*' sort false
-#zstyle ':completion:*:descriptions' format '[%d]'
+zstyle ':completion:*:descriptions' format '[%d]'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --icons --color=always $realpath'
 zstyle ':fzf-tab:*' fzf-flags --color=fg:1,fg+:2 --bind=tab:accept
-zstyle ':fzf-tab:*' use-fzf-default-opts yes
 
 #############################################################
 # Lines configured by zsh-newuser-install
