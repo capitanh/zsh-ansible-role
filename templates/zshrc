@@ -11,11 +11,11 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_AUTO_TITLE="true"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting fzf-tab)
+zstyle ':omz:update' mode auto
 source $ZSH/oh-my-zsh.sh
 ZSH_HIGHLIGHT_STYLES[path]='bold'
 
 # Plugins config
-zstyle ':omz:update' mode auto
 zstyle ':completion:*:git-checkout:*' sort false
 zstyle ':completion:*:descriptions' format '[%d]'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
