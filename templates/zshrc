@@ -20,7 +20,7 @@ zstyle ':completion:*:git-checkout:*' sort false
 zstyle ':completion:*:descriptions' format '[%d]'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --icons --color=always $realpath'
-zstyle ':fzf-tab:*' fzf-flags --color=fg:1,fg+:2 --bind=tab:accept
+zstyle ':fzf-tab:*' fzf-flags --style=full --height 40% --bind=tab:accept
 
 #############################################################
 # Lines configured by zsh-newuser-install
@@ -77,6 +77,6 @@ export MICRO_TRUECOLOR=1
 export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
 export PAGER="batcat -p"
 export EZA_COLORS="ex=32;1:ur=38;5;250:uw=38;5;250:ux=38;5;250:ue=38;5;250:gr=38;5;245:gw=38;5;245:gx=38;5;245:tr=38;5;240:tw=38;5;240:tx=38;5;240:un=38;5;242:gn=38;5;242:da=38;5;255:uu=38;5;245:gu=38;5;245:Gm=2;38;5;60:Go=38;5;60"
-export FZF_DEFAULT_OPTS='--height 40% --border --highlight-line'
+export FZF_DEFAULT_OPTS='--height 40% --style=full --highlight-line'
 export DIRENV_LOG_FORMAT=
 export PATH="$PATH:/home/{{admin_user}}/.local/bin"
