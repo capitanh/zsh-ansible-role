@@ -64,7 +64,6 @@ alias df='dysk'
 alias ps='procs'
 alias du='gdu_linux_amd64'
 alias md='frogmouth'
-alias -g -- -h='-h | bat --language=help --style=plain'
 alias zj='zellij'
 
 #############################################################
