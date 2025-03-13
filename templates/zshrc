@@ -39,6 +39,7 @@ compinit
 # Custom functions and sources
 source <(fzf --zsh)
 eval "$(direnv hook zsh)"
+eval "$(zoxide init zsh)"
 function cd() {
   new_directory="$*";
   if [ $# -eq 0 ]; then
