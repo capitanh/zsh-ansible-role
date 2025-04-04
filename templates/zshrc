@@ -76,4 +76,4 @@ export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
 export PAGER="batcat -p"
 export FZF_DEFAULT_OPTS='--height 40% --style=full --highlight-line'
 export DIRENV_LOG_FORMAT=
-export PATH="$PATH:/home/{{admin_user}}/.local/bin"
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin:/home/{{admin_user}}/.local/bin"
